@@ -1,10 +1,15 @@
-var app = angular.module('app', []);
+var app = angular.module('app', [
+  'ngRoute',
+  'movies',
+  'templates.app',
+  'templates.common']);
 
-app.config(['$locationProvider', function($locationProvider) {
-  $locationProvider.html5Mode(true);
-}]);
+app.config(['$locationProvider', '$routeProvider', 
+  function($locationProvider, $routeProvider) {
+    $locationProvider.html5Mode(true);
+    $routeProvider.otherwise({redirectTo: '/movies'});
+  }]);
 
-app.controller('AppCtrl', function($scope) {
-  $scope.userName = "Raf";
-  $scope.movies = ["The Godfather", "The Shining"];
-});
+app.controller('AppCtrl', ['$scope', 
+  function($scope) {
+  }]);
