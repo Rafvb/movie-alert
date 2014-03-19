@@ -1,10 +1,6 @@
-angular.module('app');
+var app = angular.module('app', []);
 
-angular.module('app').constant('MONGOLAB_CONFIG', {
-  baseUrl: '/databases/',
-  dbName: 'ascrum'
+app.controller('AppCtrl', function($scope) {
+  $scope.userName = "Raf";
+  $scope.movies = ["The Godfather", "The Shining"];
 });
-
-angular.module('app').controller('AppCtrl', ['$scope', function($scope) {
-
-}]);

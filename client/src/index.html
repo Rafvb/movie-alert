@@ -10,6 +10,9 @@
 </head>
 
 <body ng-controller="AppCtrl">
-  <div ng-view class="container-fluid">Dit is een test</div>
+  <div class="container-fluid">Hi {{userName}}</div>
+  <ul>
+    <li ng-repeat="movie in movies">{{movie}}</li>
+  </ul>
 </body>
 </html>
